@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body class="light-theme">
+    <header>
+        <h1>Settings</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="auction.html">Auctions</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="account-settings">
+            <h2>Change Account</h2>
+            <form id="account-form">
+                <label for="new-username">New Username:</label>
+                <input type="text" id="new-username" name="new-username" required>
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+                <button type="submit">Change Account</button>
+            </form>
+        </section>
+        <section id="theme-settings">
+            <h2>Change Theme</h2>
+            <button onclick="setTheme('light')">Light Theme</button>
+            <button onclick="setTheme('dark')">Dark Theme</button>
+            <button onclick="setTheme('colorful')">Colorful Theme</button>
+            <button onclick="setTheme('custom')">Custom Theme</button>
+            <div id="custom-theme-settings" style="display: none;">
+                <label for="background-color">Background Color:</label>
+                <input type="color" id="background-color" name="background-color">
+                <label for="text-color">Text Color:</label>
+                <input type="color" id="text-color" name="text-color">
+                <button onclick="applyCustomTheme()">Apply Custom Theme</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Roblox Trading Site. All rights reserved.</p>
+    </footer>
+</body>
+</html>
